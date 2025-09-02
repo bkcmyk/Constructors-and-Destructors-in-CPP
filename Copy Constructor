@@ -1,0 +1,54 @@
+/*
+Barkha Kumari
+24070123029
+EnTC A1
+*/
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+class student {
+    int age;
+    string name;
+
+public:
+    // Parameterized constructor
+    student(string n, int a) {
+        name = n;
+        age = a;
+    }
+
+    // Copy constructor
+    student(const student &s) {
+        name = s.name;
+        age = s.age;
+        cout << "\nCopy Constructor called!\n";
+    }
+
+    void display() {
+        cout << "\nName: " << name << "\nAge: " << age << endl;
+    }
+};
+
+int main() {
+    student s("Barkha", 20);
+    s.display();
+
+    student copyC(s);   // Calls the copy constructor
+    copyC.display();
+
+    return 0;
+}
+
+/* 
+Sample Output:
+
+Name: Barkha
+Age: 20
+
+Copy Constructor called!
+
+Name: Barkha
+Age: 20
+*/

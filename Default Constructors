@@ -1,0 +1,45 @@
+/*
+Barkha Kumari
+24070123029
+EnTC A1
+*/
+
+#include <iostream>
+using namespace std;
+
+class student {
+    int roll_no;
+    char name[50];
+    long fee;
+
+public:
+    student() {
+        cout << "Enter Your Name: ";
+        cin >> name;
+
+        cout << "\nEnter Your Roll number: ";
+        cin >> roll_no;
+
+        cout << "\nEnter Your Fees: ";
+        cin >> fee;
+    }
+
+    void display() {
+        cout << name << "\t" << roll_no << "\t" << fee;
+    }
+};
+
+int main() {
+    student s;
+    s.display();
+    return 0;
+}
+
+/* 
+Sample Output:
+
+Enter Your Name: Barkha
+Enter Your Roll number: 101
+Enter Your Fees: 50000
+Barkha    101    50000
+*/
